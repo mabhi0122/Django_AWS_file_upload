@@ -7,8 +7,7 @@ AWS S3 Configuration: Integrated Django with AWS S3 using boto3 and Django’s s
 File Retrieval & Display: Uploaded files are retrieved from S3 and displayed in the browser using their S3 URLs.
 Scalability & Security: AWS S3 provides scalable storage, and access control policies ensure secure file access.
 
-### aws s3 configurations
-
+## aws s3 configurations
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
