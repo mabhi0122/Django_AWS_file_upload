@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h3>Dashboard</h3>
+    {% if data %}
+        <p>Name: {{ data.name }}</p>
+        <img src="{{ data.profile.url }}" alt="Profile Picture">
+        <a href="{{ data.resume.url }}" download class="btn btn-secondary">Download resume</a>
+    {% else %}
+        <p>No file data found!</p>
+    {% endif %}
+    <br>
+    <br>
+    <a href="{% url 'logout' %}">Logout</a>
+    
+</body>
+</html>

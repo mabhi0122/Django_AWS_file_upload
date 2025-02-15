@@ -1,0 +1,24 @@
+{% extends "MainApp/index.html" %}
+{% load static %}
+<title>
+    {% block title %} Login Page{% endblock title %}
+</title>
+
+{% block content %}
+<h3>Welcome Back</h3>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <p class="text-muted">I Don't Have an Account? <a href="{% url 'register' %}" class="">Register</a></p>
+
+    <!-- Display Error Messages -->
+     {% if form.non_field_errors %}
+        <ul>
+            {% for error in form.non_field_errors %}
+                <li>{{error}}</li>
+            {% endfor %}
+        </ul>
+     {% endif %}
+{% endblock content %}
